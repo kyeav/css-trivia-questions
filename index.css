@@ -1,0 +1,215 @@
+/* what is a box model */
+
+/* box that wraps around every single html element */
+/* includes margin, border, padding and content */
+
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 20px solid black;
+    padding: 20px;
+    margin: 20px;
+} */
+
+/* what is specificity */
+
+/* specificity is a weight given to a style to determine if it should be applied or not  */
+
+/* 1. same element */
+/* 2. class name */
+/* 3. id */
+/* 4. important */
+
+/* div {
+    width: 100px;
+    height: 100px;
+}
+
+div.random-class {
+    background-color: black;
+}
+
+#random-id {
+    background-color: red;
+}
+
+div {
+    background-color: black !important;
+} */
+
+/* how to center a div */
+
+/* .outer { */
+    /* width: 300px; */
+    /* height: 300px; */
+    /* background-color: black; */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* position: relative; */
+
+    /* display: flex; */
+
+    /* display: grid; */
+    /* justify-content: center; */
+    /* align-items: center; */
+/* } */
+
+/* .inner { */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: red; */
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    /* margin: auto; */
+/* } */
+
+/* difference between div and section */
+
+/* divs are just used to group elements together, doesnt have a specific meaning
+    sections are used to group together elements that are related to each other
+    sections are typically structured with heading then paragraph text etc. */
+
+/* difference between block, inline and inline-block */
+
+/* 1. block
+  starts on a new line and takes up the whole width e.g. <p> elements */
+
+/* div {
+    display: block;
+    height: 100px;
+    border: 1px solid black;
+} */
+
+/* 2. inline
+    starts on the same line and cant set the width and height, e.g. <span> elements */
+
+/* span {
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+} */
+
+/* 3. inline-block
+    starts on the same line, you're allowed to set the width and height */
+
+/* .inlineblock {
+    display: inline-block;
+} */
+
+/* difference between position relative, absolute, fixed, sticky and static */
+
+/* * {
+    box-sizing: border-box;
+}
+
+div {
+    height: 150px;
+    border: 2px solid black;
+} */
+
+/* .blue-bg { */
+    /* position: static;
+    top: 50px; */
+
+    /* position: relative;
+    top: 50px; */
+
+    /* position: absolute;
+    top: 50%;
+    width: 100%; */
+
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
+
+    /* position: sticky; */
+    /* top: 100px; */
+    /* width: 100%; */
+
+    /* background-color: blue; */
+/* } */
+
+/* difference visibility: hidden; and display: none; */
+
+/* visibility: hidden; 
+    keeps the element in the DOM but makes it invisible on the screen */
+
+/* display: none;
+    removes the element completely from the DOM */
+
+/* * {
+    box-sizing: border-box;
+}
+
+div {
+    height: 150px;
+    border: 2px solid black;
+}
+
+.visbility {
+    visibility: hidden;
+}
+
+.display {
+    display: none;
+} */
+
+/* how to build a triangle in css? */
+
+/* * {
+    box-sizing: border-box;
+} */
+
+/* div { */
+    /* width: 0; */
+    /* height: 0; */
+
+    /* background-color: black;
+    border: 100px solid red;
+    border-top: 100px solid black; */
+
+    /* border: 100px solid transparent;
+    border-top: 0; */
+
+    /* border-right: 100px solid transparent;
+    border-left: 100px solid transparent; */
+
+    /* border-bottom: 100px solid black; */
+/* } */
+
+/* what are pseudo elements in css */
+
+/* 1. pseudo element selectors 
+    used to give your elements special effects */
+
+/* p::after {
+    content: "!!!";
+}
+
+p:hover::before {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+} */
+
+/* what are data attributes? */
+
+/* used to store data in HTML */
+
+[data-emoji]::before {
+    content: attr(data-emoji);
+}
+
+[data-frontend]::before {
+    content: attr(data-frontend);
+}
